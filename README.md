@@ -76,4 +76,7 @@ To get a local copy up and running, follow these steps:
 
 3. **Run the Development Server**:
     ```bash
+    ionic serve
+    ```
+    
 
