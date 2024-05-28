@@ -1,6 +1,6 @@
-# MyCangel.org Website
+# MyCCangel.org Website
 
-Welcome to the MyCangel.org website repository. This project aims to create a comprehensive website using the Ionic framework and use data analyses tool to help user with advices.
+Welcome to the MyCCangel.org website repository. This project aims to create a comprehensive website using the Ionic framework and use data analyses tool to help user with advices.
 
 # Disclaimer
 The content provided on this website, including all text, graphics, images, and other material, is for informational purposes only and is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always check the advice of your qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay seeking it because of something you have read on this website.
