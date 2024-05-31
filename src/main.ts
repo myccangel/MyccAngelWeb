@@ -7,6 +7,13 @@ import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
 import { environment } from './environments/environment';
 
+import { addIcons } from 'ionicons';
+import { hourglassOutline, add } from 'ionicons/icons';
+addIcons({
+  'hourglass-outline': hourglassOutline,
+  'add': add
+});
+
 if (environment.production) {
   enableProdMode();
 }

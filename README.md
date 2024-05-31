@@ -65,18 +65,31 @@ To get a local copy up and running, follow these steps:
 
 1. **Clone the Repository**:
     ```bash
-    git clone https://github.com/yourusername/mycangel-website.git
-    cd mycangel-website
+    git clone git clone https://github.com/myccangel/MyccAngelWeb.git
     ```
-
-2. **Install Dependencies**:
+2. **Push**:
+    ```bash
+    cd myccangel
+    git push
+    
+    ```
+3. **Git logs**:
+    ```bash
+    git log
+    
+    ```
+4. **Install Dependencies**:
     ```bash
     npm install
+    npm install ionicons
     ```
 
-3. **Run the Development Server**:
+4. **Run the Development Server**:
     ```bash
     ionic serve
     ```
-    
+5. **Create Pages**:
+    ```bash
+    ionic g page pages/'page name'
+    ```    
 
