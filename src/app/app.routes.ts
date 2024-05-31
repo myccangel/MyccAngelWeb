@@ -26,7 +26,11 @@ export const routes: Routes = [
     path: 'login',
     loadComponent: () =>
       import('./pages/login/login.page').then((m) => m.LoginPage),
+  },  {
+    path: 'update',
+    loadComponent: () => import('./pages/update/update.page').then( m => m.UpdatePage)
   }
+
 ];
 
 @NgModule({
