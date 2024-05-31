@@ -1,0 +1,17 @@
+ion-button[color="dark"]{
+  text-transform: initial;
+}
+
+ion-content {
+  --background: var(--purple-ribbon);
+}
+
+/* src/app/pages/loader/loader.page.scss */
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+
