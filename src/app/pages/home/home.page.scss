@@ -1,17 +1,65 @@
-ion-list{
-  padding: 0%;
-  box-shadow: 0 1px 2px 1px rgb(0 0 0/20%);
-  .money{
-    font-weight: bold;
-  }
+/* Estilos padrão para todos os tamanhos de tela */
+.main-container {
+  display: flex;
 }
 
-ion-card{
-  ion-card-subtitle{
-    text-transform:uppercase;
-    font-weight: bold;
+.card-calendar-container {
+  display: flex;
+  width: 100%;
+}
+
+.left-card {
+  flex: 1;
+  margin-right: 10px; /* Espaçamento entre o card e o calendário/eventos */
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar-container {
+  width: 100%; /* Define a largura do calendário */
+}
+
+.events-list {
+  width: 100%; /* Define a largura dos eventos */
+}
+
+/* Estilo para a imagem */
+.image-container ion-img {
+  max-width: 100%; /* Define a largura máxima da imagem */
+  max-height: 50%; /* Permite que a altura da imagem seja ajustada automaticamente */
+}
+
+/* Adiciona um espaçamento inferior ao conteúdo abaixo da imagem */
+.main-container {
+  padding-bottom: 20px; /* Espaçamento inferior de 20 pixels */
+}
+
+ion-toolbar ion-title {
+  color: #B95CF4; /* Roxo */
+}
+ion-fab-button {
+  --background: #B95CF4; /* Cor de preenchimento roxa */
+}
+ion-title
+{
+  color: #B95CF4; /* Roxo */
+}
+/* Estilos para dispositivos móveis */
+@media only screen and (max-width: 767px) {
+  .card-calendar-container {
+    flex-direction: column; /* Altera a direção do flexbox para coluna */
   }
-  p{
-    white-space: normal;
+
+  .left-card,
+  .right-container {
+    width: 100%; /* Define a largura total para ambos os componentes */
+    margin-right: 0; /* Remove o espaçamento entre os componentes */
+  }
+
+  .right-container {
+    margin-top: 10px; /* Adiciona um espaçamento superior entre os componentes */
   }
 }

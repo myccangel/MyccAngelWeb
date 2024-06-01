@@ -1,5 +1,6 @@
 ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  --background: #ffffff; /* Branco */
+  color: #B95CF4; /* Roxo */
 }
 
 ion-menu.md ion-content {
@@ -23,7 +24,7 @@ ion-menu.md ion-note {
 }
 
 ion-menu.md ion-list#inbox-list {
-  border-bottom: 1px solid var(--ion-background-color-step-150, #d7d8da);
+  border-bottom: 1px solid #000000; /* Preto */
 }
 
 ion-menu.md ion-list#inbox-list ion-list-header {
@@ -38,7 +39,7 @@ ion-menu.md ion-list#labels-list ion-list-header {
 
   margin-bottom: 18px;
 
-  color: #757575;
+  color: #B95CF4; /* Roxo */
 
   min-height: 26px;
 }
@@ -50,19 +51,20 @@ ion-menu.md ion-item {
 }
 
 ion-menu.md ion-item.selected {
-  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+  --background: rgba(185, 92, 244, 0.14); /* Roxo com 14% de opacidade */
 }
 
 ion-menu.md ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: #B95CF4; /* Roxo */
 }
 
 ion-menu.md ion-item ion-icon {
-  color: #616e7e;
+  color: #B95CF4; /* Roxo */
 }
 
 ion-menu.md ion-item ion-label {
   font-weight: 500;
+  color: #B95CF4; /* Roxo */
 }
 
 ion-menu.ios ion-content {
@@ -85,12 +87,12 @@ ion-menu.ios ion-item {
 }
 
 ion-menu.ios ion-item.selected ion-icon {
-  color: var(--ion-color-primary);
+  color: #B95CF4; /* Roxo */
 }
 
 ion-menu.ios ion-item ion-icon {
   font-size: 24px;
-  color: #73849a;
+  color: #B95CF4; /* Roxo */
 }
 
 ion-menu.ios ion-list#labels-list ion-list-header {
@@ -111,9 +113,9 @@ ion-note {
   display: inline-block;
   font-size: 16px;
 
-  color: var(--ion-color-medium-shade);
+  color: #B95CF4; /* Roxo */
 }
 
 ion-item.selected {
-  --color: var(--ion-color-primary);
+  --color: #B95CF4; /* Roxo */
 }

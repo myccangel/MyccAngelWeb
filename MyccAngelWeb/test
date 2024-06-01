@@ -1,0 +1,11 @@
+<!--- first test:
+
+  # The first test was related to the *ngIf="hasFooter" and *ngIf="hasHeader" check:
+hasFooter: boolean = true;
+hasHeader: boolean = false;
+
+and also:
+
+hasFooter: boolean = false;
+hasHeader: boolean = true;
+--->

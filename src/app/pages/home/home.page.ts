@@ -12,8 +12,10 @@ import {
   IonLabel,
   IonItem,
   IonButtons,
-  IonMenuButton
+  IonMenuButton,
+  IonDatetime
 } from '@ionic/angular/standalone';
+import { RecordsCardComponent } from 'src/app/components/records-card/records-card.component';
 
 @Component({
   selector: 'app-home',
@@ -32,15 +34,40 @@ import {
     IonTitle,
     IonToolbar,
     IonMenuButton,
+    IonDatetime,
     CommonModule,
-    FormsModule
+    FormsModule,
+    RecordsCardComponent
   ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class HomePage implements OnInit {
+  events: { title: string; date: string }[] = [];
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    // Initial load of events, replace with your logic
+    this.events = [
+      { title: 'Event 1', date: '2024-06-01' },
+      { title: 'Event 2', date: '2024-06-05' }
+    ];
+  }
 
+  onDateChange(event: any) {
+    const selectedDate = event.detail.value;
+    console.log('Selected date: ', selectedDate);
+    // Fetch and display events for the selected date
+    // Replace with your logic to fetch events
+    this.events = this.getEventsForDate(selectedDate);
+  }
+
+  getEventsForDate(date: string): { title: string; date: string }[] {
+    // Replace with your actual event fetching logic
+    return [
+      { title: `Event on ${date}`, date }
+    ];
+  }
 }

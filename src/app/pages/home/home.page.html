@@ -1,52 +1,100 @@
 <ion-header>
-  <ion-toolbar color="success">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>MyccAngel</ion-title>
+    <ion-buttons slot="end">
+      <ion-button  routerLink="/signup">Sign Up</ion-button>
+      <ion-button routerLink="/login">Login</ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-
 <ion-content>
-  <ion-list color="success">
-    <ion-item color="success">
-    <ion-avatar slot="start">
-      <img src="https://worldibdday.org/front/contents/uploads/web/world-ibd-day-purple-ribbon.png">
-    </ion-avatar>
-    <ion-label>
-      <h1>Derek Prates</h1>
-      <p>Gathhered <span class ="money">$ 15,00</span></p>
-    </ion-label>
-  </ion-item>
-  </ion-list>
-  <ion-card>
-  <ion-card-header>
-    <ion-card-subtitle>Last update</ion-card-subtitle>
-  </ion-card-header>
-  <ion-card-content>
-    <ion-item lines="none">
-      <ion-icon name="hourglass-outline" slots="start" color="warning"></ion-icon>
-      <ion-label>
-        On hold
-        <p>22/04/2024 16:30:00</p>
-      </ion-label>
-    </ion-item>
-    <ion-item lines="none">
-      <ion-label>
-        <p>Created at 21/04/2024</p>
-        <p> Notes: </p>
-      </ion-label>
+  <div class="image-container">
+    <!-- Imagem da internet com altura ajustada -->
+    <ion-img src="https://static.vecteezy.com/system/resources/previews/023/107/177/non_2x/world-inflammatory-bowel-disease-day-template-for-background-banner-card-poster-illustration-vector.jpg"></ion-img>
+  </div>
 
-    </ion-item>
-    <ion-button color="success" fill="clear" size="full">See all...</ion-button>
-  </ion-card-content>
-</ion-card>
+  <div class="main-container">
+    <!-- Card e calendário -->
+    <div class="card-calendar-container">
+      <!-- Card -->
+      <ion-card class="left-card">
+        <ion-card-header>
+          <ion-card-title>Left Card</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <!-- Conteúdo do card -->
+        </ion-card-content>
+      </ion-card>
+
+      <!-- Calendário e eventos -->
+      <div class="right-container">
+        <!-- Calendário -->
+        <div class="calendar-container">
+          <ion-title class="ion-text-center">Coming Events</ion-title>
+          <ion-datetime
+            presentation="date"
+            value="2024-06-01"
+            min="2024-06-01"
+            max="2030-12-31"
+            (ionChange)="onDateChange($event)"
+          ></ion-datetime>
+        </div>
+
+        <!-- Eventos -->
+        <div class="events-list">
+          <ion-list>
+            <ion-item *ngFor="let event of events">
+              <ion-label>
+                <h2>{{ event.title }}</h2>
+                <p>{{ event.date }}</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button color="success">
+    <ion-fab-button>
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
-
-
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar> <!-- Altera a cor de fundo para roxo -->
+    <ion-row class="ion-align-items-center">
+      <ion-col size="6">
+        <ion-button expand="block"  fill="clear" href="https://www.facebook.com/seu-facebook">
+          <ion-icon slot="start" name="logo-facebook"></ion-icon>
+          Facebook
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block" fill="clear" href="https://twitter.com/seu-twitter">
+          <ion-icon slot="start" name="logo-twitter"></ion-icon>
+          Twitter
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="6">
+        <ion-button expand="block" fill="clear" href="https://www.linkedin.com/in/seu-linkedin">
+          <ion-icon slot="start" name="logo-linkedin"></ion-icon>
+          LinkedIn
+        </ion-button>
+      </ion-col>
+      <ion-col size="6">
+        <ion-button expand="block"  fill="clear" href="mailto:seu-email@example.com">
+          <ion-icon slot="start" name="mail"></ion-icon>
+          Email
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>

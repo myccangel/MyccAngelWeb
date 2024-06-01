@@ -84,12 +84,15 @@ To get a local copy up and running, follow these steps:
     npm install ionicons
     ```
 
-4. **Run the Development Server**:
+5. **Run the Development Server**:
     ```bash
     ionic serve
     ```
-5. **Create Pages**:
+6. **Create Pages**:
     ```bash
     ionic g page pages/'page name'
     ```    
-
+7. **Create Components**:
+    ```bash
+    ionic g component components/'component name'
+    ```   
