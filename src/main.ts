@@ -8,14 +8,17 @@ import { AppComponent } from './app/app.component';
 import { environment } from './environments/environment';
 
 import { addIcons } from 'ionicons';
-import { hourglassOutline, add, checkmarkCircleOutline, syncOutline, archiveOutline } from 'ionicons/icons';
+import { hourglassOutline, add, checkmarkCircleOutline, syncOutline, archiveOutline, trophyOutline, mailOutline, searchOutline } from 'ionicons/icons';
 
 addIcons({
   'hourglass-outline': hourglassOutline,
   'add': add,
   'checkmark-circle-outline': checkmarkCircleOutline,
   'sync-outline': syncOutline,
-  'archive-outline': archiveOutline
+  'archive-outline': archiveOutline,
+  'trophy-outline': trophyOutline,
+  'mail-outline': mailOutline, // Adicione o ícone de mail
+  'search-outline': searchOutline // Adicione o ícone de pesquisa
 });
 
 if (environment.production) {

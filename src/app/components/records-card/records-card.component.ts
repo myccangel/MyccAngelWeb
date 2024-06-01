@@ -48,6 +48,7 @@ export class RecordsCardComponent  implements OnInit {
 @Input() updateAt: string | undefined;
 @Input() createAt: string | undefined;
 @Input() notes: string | undefined;
+@Input() value: string | undefined;
 
   constructor() { }
 

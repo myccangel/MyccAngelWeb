@@ -45,6 +45,7 @@ import { RecordsCardComponent } from 'src/app/components/records-card/records-ca
 })
 export class HomePage implements OnInit {
   events: { title: string; date: string }[] = [];
+  hasFooter: boolean = true; // Adicione esta linha
 
   constructor() { }
 

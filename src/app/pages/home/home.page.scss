@@ -38,7 +38,7 @@
 }
 
 ion-toolbar ion-title {
-  color: #B95CF4; /* Roxo */
+  color: #7417ae; /* Roxo */
 }
 ion-fab-button {
   --background: #B95CF4; /* Cor de preenchimento roxa */
@@ -47,6 +47,72 @@ ion-title
 {
   color: #B95CF4; /* Roxo */
 }
+
+.footer-link {
+  font-size: 14px; /* Tamanho de fonte menor */
+  color: #B95CF4; /* Cor roxa */
+}
+.footer-link .icon-label {
+  margin-left: 0rem; /* Adjust as needed */
+}
+
+.footer-link .icon-label {
+  margin-right: 0rem; /* Adjust as needed */
+}
+
+.custom-button {
+  color: white;
+  border: none; // Removes default border
+  font-weight: bold; // Makes text bold
+  text-align: center;
+  margin: 0 5px; // Adds some margin between buttons
+  padding: 10px 20px; // Adjust padding as needed
+
+  &:hover {
+    background-color: darken(#B95CF4, 10%); // Darkens the purple color on hover
+  }
+
+  &:focus {
+    box-shadow: 0 0 5px #B95CF4; // Adds a subtle shadow when focused
+    outline: none; // Removes default outline
+  }
+  .early-diagnosis-button {
+    color: #B95CF4; /* Purple text color */
+  }
+}
+
+/* Estilos para o tooltip */
+ion-fab-button {
+  position: relative;
+}
+
+ion-fab-button:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%; /* Posiciona o tooltip acima do botão */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+ion-fab-button:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 90%; /* Posiciona a seta do tooltip */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  z-index: 1000;
+}
+
 /* Estilos para dispositivos móveis */
 @media only screen and (max-width: 767px) {
   .card-calendar-container {
@@ -61,5 +127,25 @@ ion-title
 
   .right-container {
     margin-top: 10px; /* Adiciona um espaçamento superior entre os componentes */
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .desktop-title {
+    display: none; /* Esconde o título em dispositivos móveis */
+  }
+
+  .desktop-buttons {
+    display: none; /* Esconde os botões em dispositivos móveis */
+  }
+
+  ion-label {
+    display: flex;
+    flex-direction: column; /* Muda os botões para uma coluna */
+  }
+
+  .custom-button {
+    width: 100%; /* Define a largura total para os botões */
+    margin: 5px 0; /* Adiciona margem vertical entre os botões */
   }
 }
